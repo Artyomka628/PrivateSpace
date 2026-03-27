@@ -1,19 +1,19 @@
 @echo off
 chcp 65001
 cls
-title Перезагрузка
+title Restart
 color 9f
-echo Private Space от Artyomka App Studio
+echo Private Space by Drygval Artyom
 echo.
 echo =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-echo  Запущено как система, не требуется разрешение
+echo  Running as SYSTEM, no special permission required
 echo =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 echo.
-echo Запуск файла... 
+echo Launching script...
 ping localhost -n 2 > nul
-echo Перезагрузка в систему Private Space...
+echo Restarting into Private Space...
 echo.
-echo Редактирование реестра...
+echo Updating the registry...
 reg add HKLM\System\Setup /v CmdLine /t REG_SZ /d "cmd.exe /k C:\dosexec.bat" /f
 reg add HKLM\System\Setup /v SystemSetupInProgress /t REG_DWORD /d 1 /f > nul
 reg add HKLM\System\Setup /v SetupType /t REG_DWORD /d 2 /f > nul
@@ -21,20 +21,20 @@ reg add HKLM\Software\Microsoft\Windows\CurrentVersion\Policies\System /v Enable
 reg add HKLM\Software\Microsoft\Windows\CurrentVersion\Policies\System /v EnableLUA /t REG_DWORD /d 0 /f > nul
 reg add HKLM\Software\Microsoft\Windows\CurrentVersion\Policies\System /v VerboseStatus /t REG_DWORD /d 1 /f > nul
 echo.
-echo Готово, перезагрузка. (3 попытки)
-echo Попытка #1
+echo Ready, restarting. (3 attempts)
+echo Attempt #1
 shutdown -r -t 0
 ping localhost -n 3 > nul
-echo Ошибка. Попытка #2
+echo Failed. Attempt #2
 shutdown -r -t 0
 ping localhost -n 3 > nul
-echo Ошибка. Попытка #3
+echo Failed. Attempt #3
 shutdown -r -t 0
-echo Ошибка. Обычно система не сразу перезагружает компьютер, подождите 5 секунд
+echo Failed. Windows may not restart immediately; wait 5 seconds
 timeout 5
 :err
 cls
 color 4f
-echo Если вы видите эту надпись, перезагрузитесь самостоятельно!
+echo If you see this message, please restart manually!
 pause
 goto err

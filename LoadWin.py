@@ -31,7 +31,7 @@ def update_progress():
     progress_var.set(next_value)
 
     if next_value == 100:
-        label2.config(text="Похоже, Windows не удалось перезагрузить компьютер.\nВам придётся сделать это самостоятельно.")
+        label2.config(text="It looks like Windows failed to restart. You will need to do it manually.")
     else:
         root.after(100, update_progress)
 
@@ -43,7 +43,7 @@ def run_win_script():
         win_script_started = True
 
 root = tk.Tk()
-root.title("Загрузка Windows")
+root.title("Windows Loading")
 root.geometry("500x300")
 root.resizable(False, False)
 root.configure(bg="#343deb")
@@ -60,7 +60,7 @@ progress_var = tk.IntVar()
 progress_bar = ttk.Progressbar(root, orient="horizontal", length=400, mode="determinate", variable=progress_var, maximum=100)
 progress_bar.pack(pady=20)
 
-label2 = tk.Label(root, text="Загрузка Windows...", font=("Helvetica", 14), bg="#343deb", fg="white")
+label2 = tk.Label(root, text="Loading Windows...", font=("Helvetica", 14), bg="#343deb", fg="white")
 label2.pack(pady=20)
 
 win_script_started = False

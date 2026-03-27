@@ -5,7 +5,7 @@ cd C:\Progra~1\PrivateSpace
 
 for /f "delims=" %%a in (theme.txt) do set "theme=%%a"
 
-rem Применение темы напрямую
+rem Apply the theme directly
 if /i "%theme%"=="theme.h1" color a
 if /i "%theme%"=="theme.h2" color f2
 if /i "%theme%"=="theme.d" color f
@@ -15,11 +15,11 @@ if /i "%theme%"=="theme.r" color cf
 
 cls
 echo.
-echo        Терминал
-echo Artyom Drygval, 2024.
+echo        Terminal
+echo Drygval Artyom, 2026.
 echo.
-echo В этот терминал встроены дополнительные команды.
-echo Для просмотра справки, введите "help+"
+echo This terminal comes with extra commands.
+echo For help, type "help+"
 goto Console
 
 :Console

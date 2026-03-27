@@ -1,14 +1,14 @@
 echo.
-echo Справка по дополнительным командам
+echo Additional command help
 echo.
-echo ver (заменена оригинальным из командной строки) — показывает версию Private Space
+echo ver (replaces the normal command) — shows the Private Space version
 echo.
-echo theme — задаёт тему для терминала
+echo theme — sets the terminal theme
 echo.
-echo parrot — танцующий попугай
+echo parrot — dancing parrot
 echo.
-echo rickroll — включает рикролл
+echo rickroll — plays a rickroll
 echo.
-echo disablerestrictions — отключает ограничение запуска файлов из папки приложения, а также разрешает доступ к папке _internal
-echo Рекомендуется не использовать эту команду, изменение или запуск файлов из папки приложения, может навредить вашему компьютеру!
+echo disablerestrictions — disables the restriction on launching files from the app folder and allows access to the _internal folder
+echo It is strongly recommended not to use this command; modifying or running files from the app folder can damage your computer!
 echo.

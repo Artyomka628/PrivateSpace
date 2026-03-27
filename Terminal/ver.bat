@@ -24,7 +24,7 @@ echo ░                ┃  ┃        ┃     ┃  ┃        ┃             
 echo ░          ┗━━━━━┛  ╹        ╹     ╹  ┗━━━━━┛  ┗━━━━━━┛              ░
 echo ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 echo.
-echo                        Artyomka App Studio, 2024.
-echo                    Все права защищены листком бумаги.
+echo                        Drygval Artyom, 2026.
+echo                    All rights reserved to a sheet of paper.
 echo.
-echo                    Прочитайте Readme и узнаете больше!
+echo                    Read the Readme to learn more!

@@ -1,15 +1,15 @@
 echo.
-echo Выбор темы в терминале
+echo Terminal theme selection
 echo.
-echo Смена темы: theme.[тема]
-echo Пример: theme.g
-echo Ещё пример: theme.h1
+echo Change the theme with: theme.[name]
+echo Example: theme.g
+echo Another example: theme.h1
 echo.
-echo Доступные темы:
-echo H1 — Тёмный хакер
-echo H2 — Белый хакер
-echo D — Стандартная
-echo G — Золотая
-echo B — Джедай
-echo R — Ситх
+echo Available themes:
+echo H1 — Dark hacker
+echo H2 — Light hacker
+echo D — Default
+echo G — Golden
+echo B — Jedi
+echo R — Sith
 echo.

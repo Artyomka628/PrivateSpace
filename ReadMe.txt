@@ -1,20 +1,19 @@
 Private Space Readme
 
-Private Space создовался с 14.08.2024 по 19.08.2024. Исправлены некоторые баги 28.08.2025
-Создан Artyomka App Studio (Дрыгваль Артём) — https://sites.google.com/view/artyomkaappstudio
-Спасибо, Enderman (Endermanch) — https://enderman.ch/
-Создано на Python, cmd.
+Private Space was created between 14.08.2026 and 19.08.2026. Some bugs were fixed on 28.08.2025.
+Created by Drygval Artyom — https://sites.google.com/view/artyomkaappstudio
+Thanks to Enderman (Endermanch) — https://enderman.ch/
+Created with Python and cmd.
 
-Кто делал:
+Who worked on this:
 
-Приложение — нейросеть
-Чтобы запускалось — MS-DOS Mode (Endermanch) — https://www.youtube.com/watch?v=XVezorBjHTA
-Чтобы работало — Artyomka App Studio
+App — neural network
+To launch it — MS-DOS Mode (Endermanch) — https://www.youtube.com/watch?v=XVezorBjHTA
+To make it run — Drygval Artyom
 
-Перед использованием:
-* Замените файл в ярлыке "Browser", за ярлык вашего браузера
-* По желанию, поместите в папки (Apps, Files, Games), файлы к которым вы сможете
-быстро открыть из под программы
-* Вы получили версию с исходным кодом программы. Установите python, и выполните build.py
-Для правильной сборки, программа должна находится в папке C:\Program Files\PrivateSpace
-* Не перемещайте программу в другое место, она должна находится в C:\Program Files\PrivateSpace
+Before using:
+* Replace the file referenced in the "Browser" shortcut with your browser's shortcut.
+* Optionally place files you want quick access to inside Apps, Files, or Games.
+* You have the source version of the program. Install Python and run build.py.
+  For a correct build, the program must reside in C:\Program Files\PrivateSpace
+* Do not move the program elsewhere; it must stay under C:\Program Files\PrivateSpace

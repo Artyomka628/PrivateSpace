@@ -1,1 +1,1 @@
-Сейчас терминал ограничен. Воспользуйтесь disablerestrictions, для отключения ограничений.
+The terminal is currently restricted. Run disablerestrictions to disable the limits.

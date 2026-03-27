@@ -25,39 +25,39 @@ def info(msg: str):
 def run_cmd(cmd: list[str], show_output=False, cwd: str | None = None):
     try:
         if show_output:
-            # Печатаем вывод в реальном времени голубым
+            # Print the output live using cyan formatting
             process = subprocess.Popen(cmd, cwd=cwd, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True)
             for line in process.stdout:
                 print(Fore.CYAN + line.rstrip() + Style.RESET_ALL)
             process.wait()
             if process.returncode != 0:
-                raise RuntimeError("Команда завершилась ошибкой")
+                raise RuntimeError("Command failed")
         else:
             result = subprocess.run(cmd, cwd=cwd)
             if result.returncode != 0:
-                raise RuntimeError("Команда завершилась ошибкой")
+                raise RuntimeError("Command failed")
     except Exception as e:
-        error(f"Ошибка при выполнении: {' '.join(cmd)}\n{e}")
+        error(f"Error running: {' '.join(cmd)}\n{e}")
         sys.exit(1)
 
 
 def check_python():
-    info("Проверка Python...")
+    info("Checking Python...")
     result = shutil.which("python")
     if not result:
-        error("Python не найден! Установите Python и добавьте его в PATH.")
+        error("Python not found! Install it and add it to PATH.")
         sys.exit(1)
-    success("Python найден.")
+    success("Python detected.")
 
 
 def install_deps():
-    info("Установка зависимостей...")
+    info("Installing dependencies...")
     run_cmd([sys.executable, "-m", "pip", "install", "--quiet", "pillow", "pyinstaller"])
-    success("Зависимости установлены.")
+    success("Dependencies installed.")
 
 
 def build_exe(name: str, icon: str, src: str):
-    info(f"Сборка {name}.exe ...")
+    info(f"Building {name}.exe ...")
     run_cmd([
         "pyinstaller",
         "--noconfirm", "--onefile", "--windowed",
@@ -65,11 +65,11 @@ def build_exe(name: str, icon: str, src: str):
         "--uac-admin",
         src
     ], show_output=True)
-    success(f"{name}.exe собран.")
+    success(f"{name}.exe built.")
 
 
 def build_dir(name: str, icon: str, src: str):
-    info(f"Сборка {name} ...")
+    info(f"Building {name} ...")
     run_cmd([
         "pyinstaller",
         "--noconfirm", "--onedir", "--windowed",
@@ -77,11 +77,11 @@ def build_dir(name: str, icon: str, src: str):
         "--uac-admin",
         src
     ], show_output=True)
-    success(f"{name} собран.")
+    success(f"{name} built.")
 
 
 def move_files():
-    info("Перемещение файлов...")
+    info("Moving files...")
     dist = os.path.join(BASEDIR, "dist")
 
     for exe in ["Launcher.exe", "LoadWin.exe", "Restart.exe", "Shutdown.exe", "PrivateSpace.exe"]:
@@ -90,16 +90,16 @@ def move_files():
         if os.path.exists(src):
             shutil.move(src, dst)
 
-    success("Файлы перемещены.")
+    success("Files moved.")
 
 
 def cleanup():
-    info("Очистка временных папок...")
+    info("Cleaning temporary folders...")
     for folder in ["build", "dist"]:
         path = os.path.join(BASEDIR, folder)
         if os.path.exists(path):
             shutil.rmtree(path, ignore_errors=True)
-    success("Очистка завершена.")
+    success("Cleanup complete.")
 
 
 def main():
@@ -115,7 +115,7 @@ def main():
     move_files()
     cleanup()
 
-    success("Сборка завершена успешно!")
+    success("Build finished successfully!")
     time.sleep(5)
 
 

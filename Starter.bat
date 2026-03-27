@@ -3,10 +3,10 @@ chcp 65001
 cls
 title Private Space
 color 8f
-echo Private Space от Дрыгваля Артёма
+echo Private Space by Drygval Artyom
 echo.
 echo =-=-=-=-=-=-=-=-=-=-=-=-=
-echo    Ожидание разрешения
+echo    Awaiting permission
 echo =-=-=-=-=-=-=-=-=-=-=-=-==
 :init
 setlocal DisableDelayedExpansion
@@ -38,11 +38,11 @@ color 9f
 
 REM ~-~-~-~-~-~-~-~ Batch file starts here
 echo.
-echo Запуск файла... 
+echo Launching script... 
 ping localhost -n 2 > nul
-echo Запуск режима Private Space
+echo Starting Private Space mode
 echo.
-echo Изменение реестра...
+echo Updating the registry...
 reg add HKLM\System\Setup /v CmdLine /t REG_SZ /d "cmd.exe /k C:\dosexec.bat" /f
 reg add HKLM\System\Setup /v SystemSetupInProgress /t REG_DWORD /d 1 /f > nul
 reg add HKLM\System\Setup /v SetupType /t REG_DWORD /d 2 /f > nul
@@ -56,9 +56,9 @@ if not exist %systemdrive%\Progra~1\dosexec.bat (
 )
 color af
 echo.
-echo Готово!
-echo При следующей загрузке, откроется Private Space.
+echo Done!
+echo Private Space will start the next time you boot.
 echo.
-echo Вы можете продолжить использовать компьютер.
-echo Но настоятельно рекомендуется перезагрузить компьютер
+echo You can continue using the computer.
+echo However, restarting is strongly recommended.
 ping localhost -n 3 > nul

@@ -4,30 +4,30 @@ if exist restrictions.txt (goto yes) else (goto no)
 :Yes
 set text=%random%%random%
 echo.
-echo Отключение ограничений терминала
+echo Disabling terminal restrictions
 echo.
-echo Внимание! Редактирование или открытие файлов из корневой папки Private Space, может навредить компьютёру!
+echo Warning! Editing or opening files from the Private Space root folder can damage your computer!
 echo.
-echo Создатель не несёт ответственность за потерянные данные!
+echo The creator is not responsible for lost data!
 echo.
-echo Вы действительно хотите снять ограничения?
-echo Напечатайте "%text%", если хотите снять ограничения...
+echo Do you really want to lift the restrictions?
+echo Type "%text%" to confirm...
 echo.
 set/p "cho=>"
 if %cho%==%text% goto Disable
-echo Неверный ввод!
+echo Invalid input!
 goto exit
 :No
-echo Ограничения отключены.
+echo Restrictions are already disabled.
 echo.
-echo Помните! Не запускайте и не редактируйте файлы из корневой папки Private Space!
-echo Вы можете навредить вашему компьютеру!
+echo Remember: do not run or edit files in the Private Space root folder!
+echo You might damage your computer!
 goto Exit
 :Disable
 echo.
 del c:\progra~1\PrivateSpace\restrictions.txt
-echo Ограничения сняты!
-echo Требуется перезапуск терминала. Нажмите любую клавишу для выхода...
+echo Restrictions removed!
+echo The terminal needs to restart. Press any key to exit...
 echo.
 pause
 exit

@@ -4,46 +4,46 @@ import subprocess
 import os
 
 def run_bat_file():
-    # Отключаем кнопки
+    # Disable buttons
     button1.config(state=tk.DISABLED)
     
     bat_file_path = r"C:\Program Files\PrivateSpace\Starter.bat"
-    # Запускаем .bat файл скрытно и ждем его завершения
+    # Launch the batch file hidden and wait for it
     process = subprocess.Popen(bat_file_path, creationflags=subprocess.CREATE_NO_WINDOW)
-    process.wait()  # Ждем завершения процесса
+    process.wait()  # Wait for the process to finish
     
-    # После завершения процесса показываем сообщение
-    messagebox.showinfo("Private Space", "Готово! Private Space загрузится при следующей загрузке.")
+    # After the process finishes, show a message
+    messagebox.showinfo("Private Space", "Done! Private Space will launch on the next boot.")
 
-# Создаем основное окно
+# Create the main window
 root = tk.Tk()
 root.title("Private Space")
 
-# Устанавливаем иконку окна
+# Set the window icon
 icon_path = r"C:\Program Files\PrivateSpace\Icons\Main.ico"
 root.iconbitmap(icon_path)
 
-# Устанавливаем размер окна
+# Set the window size
 root.geometry("700x500")
 
-# Устанавливаем цвет фона
+# Set the background color
 root.configure(bg='#0050b8')
 
-# Отключаем возможность изменения размера окна
+# Prevent window resizing
 root.resizable(False, False)
 
-# Создаем метку с текстом
+# Create the title label
 label = tk.Label(root, text="Private Space", font=("Arial", 36, "bold"), bg='#0050b8', fg='white')
 label.place(relx=0.5, rely=0.3, anchor='center')
 
-# Вычисляем размеры и позиции для кнопок
-button_width = 350  # 50% от ширины окна (700 / 2)
-button_height = 40  # Высота кнопки
-spacing = 20  # Расстояние между кнопками
+# Calculate sizes and positions for the buttons
+button_width = 350  # 50% of the window width (700 / 2)
+button_height = 40  # Button height
+spacing = 20  # Spacing between buttons
 
-# Создаем первую кнопку
-button1 = tk.Button(root, text="Запустить", font=("Arial", 14), width=button_width // 10, height=button_height // 20, command=run_bat_file)
+# Create the launch button
+button1 = tk.Button(root, text="Launch", font=("Arial", 14), width=button_width // 10, height=button_height // 20, command=run_bat_file)
 button1.place(x=(700 - button_width) // 2, y=350, width=button_width, height=button_height)
 
-# Запускаем главный цикл обработки событий
+# Run the main event loop
 root.mainloop()
