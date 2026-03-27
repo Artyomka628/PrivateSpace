@@ -1,0 +1,1 @@
+start C:\Progra~1\PrivateSpace\Browser.lnk
