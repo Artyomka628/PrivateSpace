@@ -1,15 +1,16 @@
 Private Space Readme
 
-Private Space was created between 14.08.2026 and 19.08.2026. Some bugs were fixed on 28.08.2025.
-Created by Drygval Artyom — https://sites.google.com/view/artyomkaappstudio
+Private Space was created between 14.08.2024 and 19.08.2024. Some bugs were fixed on 28.08.2025.
+Started reviving project on 27.03.2026
+Created by Drygval Artyom — https://github.com/artyomka628
 Thanks to Enderman (Endermanch) — https://enderman.ch/
 Created with Python and cmd.
 
 Who worked on this:
 
-App — neural network
+App — AI
 To launch it — MS-DOS Mode (Endermanch) — https://www.youtube.com/watch?v=XVezorBjHTA
-To make it run — Drygval Artyom
+To make it run — me
 
 Before using:
 * Replace the file referenced in the "Browser" shortcut with your browser's shortcut.
